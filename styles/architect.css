@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-/* *{
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} */
+} 
 
 .work-sans-font {
   font-family: "Work Sans", sans-serif;
@@ -15,6 +15,9 @@
 /* shared styles */
 .display-flex{
   display: flex;
+}
+.text-primary{
+  color: #FF900E;
 }
 
 .dark-1{
@@ -54,8 +57,9 @@ main{
 .navbar{
   justify-content: space-between;
   max-width: 1440px;
-  margin: 0 auto;
+  padding: 50px 40px 100px;
   align-items: center;
+  margin: 0 auto;
 }
 .brand{
   font-weight: 700;
@@ -82,19 +86,16 @@ main{
   text-align: center;
   margin-bottom: 50px;
 }
+.banner-description{
+  margin-bottom: 2rem;
+}
 .banner-title{
   font-size: 4rem;
   font-weight: 700;
+  margin-bottom: 1.3rem;
 }
 .banner-img{
   max-width: 100%;
-}
-/* banner responsive media query */
-
-@media screen and (max-width:576px){
-  .navbar,.nav-links{
-    flex-direction: column;
-  }
 }
 
 /* team styles */
@@ -105,7 +106,7 @@ main{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  margin-right: 72px;
+  margin-right: 130px;
 }
 .our-features{
   max-width: 470px;
@@ -113,13 +114,66 @@ main{
 .feature-title{
   font-size: 2.8rem;
   font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.feature-description{
+  margin-bottom: 2rem;
 }
 #quick-list{
   font-size: 2.8rem;
   font-weight: 500;
 }
-.features{
-  color: #FF900E;
-  font-size: 2.8rem;
-  font-weight: 700;
+
+
+
+
+
+
+/* small device responsive media query */
+
+@media screen and (max-width:768px){
+  .navbar,.nav-links,.team{
+    flex-direction: column;
+    padding: 20px;
+  }
+  .navbar ul > li{
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .brand{
+    margin-bottom: 20px;
+  }
+  .team{
+    margin-top: 64px;
+  }
+  .team-img-container{
+    grid-template-columns: repeat(1, 1fr);
+    margin-right: 0;
+  }
+  .team-img-container img{
+    width: 100%;
+  }
+  .our-features{
+    padding: 10px;
+    margin-top: 64px;
+  }
+}
+
+/* medium device responsive media query */
+
+@media screen and (min-width:768px) and (max-width:992px) {
+  .navbar{
+    padding: 50px;
+  }
+  .team{
+    flex-direction: column;
+    margin: 64px 0;
+  }
+
+  .team-img-container {
+    margin: 20px 0 70px;
+  }
+  .our-features{
+    max-width: 500px;
+  }
 }
